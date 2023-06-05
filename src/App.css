@@ -27,10 +27,11 @@
   letter-spacing: 6px;
   display: block;
   margin: 10px auto 20px auto;
-  width: 300px;
+  transform: translateY(-20px);
+  width: 200px;
   color: #a0a0a0;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #5fb4ff27);
-  line-height: 0.7em;
+  line-height: 0.1em;
   outline: none;
   animation: lightFlimmer 3s linear infinite;
 }
@@ -67,7 +68,7 @@
 
 .logo {
   font-size: 4rem;
-  transform: translateY(15px);
+  transform: translateY(12px);
   color: #a0a0a0;
   animation: lightFlimmer 3s linear infinite;
 }
