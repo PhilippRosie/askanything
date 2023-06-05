@@ -17,7 +17,7 @@ function App() {
 
     // COMMUNICATE WITH THE API
     axios
-      .post("http://localhost:5555/chat", { prompt })
+      .post("https://www.askanything.rosie.zone/chat", { prompt })
       .then((res) => {
         setResponse(res.data);
         setLoading(false);
