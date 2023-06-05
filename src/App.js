@@ -1,8 +1,8 @@
 import { useState } from "react";
+import { GiDiamondsSmile } from "react-icons/gi";
 import axios from "axios";
 
 import CGLogo from "../src/images/chatGPT.png";
-import AppLogo from "../src/images/app-logo.png";
 
 import "./App.css";
 
@@ -29,19 +29,30 @@ function App() {
 
   return (
     <div className="wrapper">
-      <img src={AppLogo} alt="Talk-Bubble-Smile" className="app-logo" />
+      <div className="app-logo">
+        <div className="logo">
+          <GiDiamondsSmile />
+        </div>
+        <h2>AskANYTHING</h2>
+      </div>
+
       <form onSubmit={handleSubmit}>
-        <img
-          src={CGLogo}
-          alt="ChatGPT-Logo"
-          className={loading ? "cg-logo loading" : "cg-logo"}
-        />
-        <input
-          type="text"
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
-          placeholder="I'm at your service!"
-        />
+        <div className="promptContainer">
+          <img
+            src={CGLogo}
+            alt="ChatGPT-Logo"
+            className={loading ? "cg-logo loading" : "cg-logo"}
+          />
+          <textarea
+            type="text"
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            cols="30"
+            rows="10"
+            placeholder="I'm at your service!"
+          ></textarea>
+        </div>
+
         <button type="submit">Ask!</button>
       </form>
       <p className="response-area">{loading ? "loading..." : response}</p>
