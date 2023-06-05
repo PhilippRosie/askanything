@@ -18,22 +18,44 @@
   gap: 10px;
 }
 
-.app-logo {
+.logoContainer {
+  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  font-family: "Teko", sans-serif;
-  letter-spacing: 6px;
-  display: block;
-  margin: 10px auto 20px auto;
-  transform: translateY(-20px);
-  width: 200px;
-  color: #a0a0a0;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #5fb4ff27);
   line-height: 0.1em;
   outline: none;
   animation: lightFlimmer 3s linear infinite;
+}
+
+.logoTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Teko", sans-serif;
+  letter-spacing: 6px;
+  display: block;
+  width: 200px;
+  color: #a0a0a0;
+  margin-top: 5px;
+}
+
+.logo {
+  font-size: 4rem;
+  color: #a0a0a0;
+  animation: lightFlimmer 3s linear infinite;
+  margin-top: 6%;
 }
 
 @keyframes lightFlimmer {
@@ -66,13 +88,6 @@
   }
 }
 
-.logo {
-  font-size: 4rem;
-  transform: translateY(12px);
-  color: #a0a0a0;
-  animation: lightFlimmer 3s linear infinite;
-}
-
 .promptContainer {
   display: flex;
   justify-content: center;
@@ -88,7 +103,7 @@
 
 .wrapper form textarea {
   width: 600px;
-  height: 400px;
+  height: 300px;
   max-width: 100%;
   background-color: black;
   color: white;
@@ -110,7 +125,11 @@
 }
 
 .wrapper form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
+  height: 60px;
   border: 3px solid #464646;
   font-size: 32px;
   font-family: "Teko", sans-serif;
@@ -121,7 +140,7 @@
   border-radius: 5px;
   transition: 0.5s ease-in-out;
   box-shadow: 0 0 5px rgb(173, 173, 173), inset 0 0 10px rgb(0, 0, 0);
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .wrapper form button:hover {
@@ -133,16 +152,19 @@
 
 .response-area {
   font-size: 20px;
-  width: 1100px;
+  width: 60%;
   max-width: 100%;
   display: block;
   margin: 50px auto 0 auto;
+  font-family: "Teko", sans-serif;
+  font-weight: 200;
+  line-height: 1.5em;
 }
 
 .footer {
   font-size: 14px;
   letter-spacing: 4px;
-  margin: 50px 0 40px 0;
+  margin: 30px 0 40px 0;
   opacity: 0.5;
 }
 
@@ -159,8 +181,54 @@
   }
 }
 
-@media screen and (max-width: 450px) {
-  .textarea {
+@media screen and (max-width: 1100px) {
+  .promptContainer {
+    width: 500px;
+  }
+
+  .wrapper form textarea {
+    font-size: 20px;
+  }
+
+  .response-area {
+    font-size: 20px;
+    width: 100%;
+    max-width: 80%;
+    display: block;
+    margin: 50px auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .promptContainer {
     width: 300px;
+  }
+
+  .wrapper form textarea {
+    font-size: 18px;
+  }
+
+  .response-area {
+    font-size: 20px;
+    width: 60%;
+    display: block;
+    margin: 50px auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .promptContainer {
+    width: 250px;
+  }
+
+  .wrapper form textarea {
+    font-size: 16px;
+  }
+
+  .response-area {
+    font-size: 20px;
+    width: 60%;
+    display: block;
+    margin: 50px auto 0 auto;
   }
 }

@@ -29,20 +29,15 @@ function App() {
 
   return (
     <div className="wrapper">
-      <div className="app-logo">
+      <div className="logoContainer">
         <div className="logo">
           <GiDiamondsSmile />
         </div>
-        <h2>AskANYTHING</h2>
+        <h2 className="logoTitle">AskANYTHING</h2>
       </div>
 
       <form onSubmit={handleSubmit}>
         <div className="promptContainer">
-          <img
-            src={CGLogo}
-            alt="ChatGPT-Logo"
-            className={loading ? "cg-logo loading" : "cg-logo"}
-          />
           <textarea
             type="text"
             value={prompt}
@@ -53,7 +48,17 @@ function App() {
           ></textarea>
         </div>
 
-        <button type="submit">Ask!</button>
+        <button type="submit">
+          {loading ? (
+            <img
+              src={CGLogo}
+              alt="ChatGPT-Logo"
+              className={loading ? "cg-logo loading" : "cg-logo"}
+            />
+          ) : (
+            "Ask!"
+          )}
+        </button>
       </form>
       <p className="response-area">{loading ? "loading..." : response}</p>
 
