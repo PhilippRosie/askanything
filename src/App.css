@@ -19,40 +19,35 @@
 }
 
 .logoContainer {
-  width: 100%;
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 10%;
-}
-
-.logoContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #5fb4ff27);
   line-height: 0.1em;
   outline: none;
   animation: lightFlimmer 3s linear infinite;
+  margin-bottom: 10%;
 }
 
 .logoTitle {
+  position: relative;
+  bottom: -12px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
   font-family: "Teko", sans-serif;
   letter-spacing: 6px;
-  display: block;
   width: 200px;
   color: #a0a0a0;
   margin-top: 5px;
 }
 
 .logo {
-  font-size: 4rem;
+  position: relative;
+  bottom: -12px;
+  font-size: 3.5rem;
   color: #a0a0a0;
   animation: lightFlimmer 3s linear infinite;
   margin-top: 6%;
@@ -182,6 +177,10 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .logoContainer {
+    margin-bottom: 12%;
+  }
+
   .promptContainer {
     width: 500px;
   }
@@ -200,6 +199,10 @@
 }
 
 @media screen and (max-width: 550px) {
+  .logoContainer {
+    margin-bottom: 25%;
+  }
+
   .promptContainer {
     width: 300px;
   }
@@ -217,6 +220,10 @@
 }
 
 @media screen and (max-width: 350px) {
+  .logoContainer {
+    margin-bottom: 30%;
+  }
+
   .promptContainer {
     width: 250px;
   }
