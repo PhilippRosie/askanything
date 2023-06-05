@@ -17,7 +17,7 @@ function App() {
 
     // COMMUNICATE WITH THE API
     axios
-      .post("http://localhost:5555/chat", { prompt })
+      .post("http://192.168.0.119:5555/chat", { prompt })
       .then((res) => {
         setResponse(res.data);
         setLoading(false);
@@ -50,11 +50,13 @@ function App() {
 
         <button type="submit">
           {loading ? (
-            <img
-              src={CGLogo}
-              alt="ChatGPT-Logo"
-              className={loading ? "cg-logo loading" : "cg-logo"}
-            />
+            <>
+              <img
+                src={CGLogo}
+                alt="ChatGPT-Logo"
+                className={loading ? "cg-logo loading" : "cg-logo"}
+              />
+            </>
           ) : (
             "Ask!"
           )}

@@ -191,10 +191,7 @@
 
   .response-area {
     font-size: 20px;
-    width: 100%;
-    max-width: 80%;
-    display: block;
-    margin: 50px auto 0 auto;
+    width: 60%;
   }
 }
 
@@ -214,8 +211,6 @@
   .response-area {
     font-size: 20px;
     width: 60%;
-    display: block;
-    margin: 50px auto 0 auto;
   }
 }
 
@@ -235,7 +230,5 @@
   .response-area {
     font-size: 20px;
     width: 60%;
-    display: block;
-    margin: 50px auto 0 auto;
   }
 }
