@@ -11,20 +11,19 @@ function App() {
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     // COMMUNICATE WITH THE API
-    axios
-      .post("http://localhost:5555/chat", { prompt })
-      .then((res) => {
-        setResponse(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    const response = await fetch(
+      `https://askanything-api.vercel.app/api/chat?text=${encodeURI(prompt)}`
+      // `http://localhost:3001/api/chat?text=${encodeURI(prompt)}`
+    );
+    const jsonData = await response.json();
+    setLoading(false);
+    setResponse(jsonData.data);
+    console.log(jsonData);
   };
 
   return (
